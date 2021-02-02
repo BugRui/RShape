@@ -1,4 +1,4 @@
-package com.bugrui.shape
+package com.bugrui.shapedemo
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

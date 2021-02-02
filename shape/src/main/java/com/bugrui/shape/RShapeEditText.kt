@@ -2,7 +2,6 @@ package com.bugrui.shape
 
 import android.content.Context
 import android.content.res.Resources
-import android.graphics.drawable.GradientDrawable
 import android.util.AttributeSet
 import android.util.TypedValue.applyDimension
 import androidx.appcompat.widget.AppCompatEditText
@@ -16,7 +15,7 @@ import androidx.appcompat.widget.AppCompatEditText
  * @UpdateRemark:   更新说明
  * @Version:        1.0
  */
-class ShapeEditText @JvmOverloads constructor(
+class RShapeEditText @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null,
     defStyleAttr: Int = 0
@@ -52,15 +51,15 @@ class ShapeEditText @JvmOverloads constructor(
         val shapeRightBottomRadius = typedArray.getFloat(R.styleable.ShapeEditText_shapeEtRightBottomRadius, DEF_VALUE_FLOAT)
         typedArray.recycle()
 
-        setShapeType(ShapeConstant.shapeTypeList[shapeTypeIndex])
+        setShapeType(RShapeConstant.shapeTypeList[shapeTypeIndex])
         if (shapeBgColor != DEF_VALUE_INT)
             setShapeBackgroundColor(shapeBgColor)
         if (shapeStrokeSize != DEF_VALUE_INT)
             setShapeStroke(shapeStrokeSize, shapeStrokeColor)
         if (shapeGradientTypeIndex != DEF_VALUE_INT)
-            setShapeGradientType(ShapeConstant.gradientTypeList[shapeGradientTypeIndex])
+            setShapeGradientType(RShapeConstant.gradientTypeList[shapeGradientTypeIndex])
         if (shapeGradientOrientationIndex != DEF_VALUE_INT)
-            setShapeGradientOrientation(ShapeConstant.gradientOrientationList[shapeGradientOrientationIndex])
+            setShapeGradientOrientation(RShapeConstant.gradientOrientationList[shapeGradientOrientationIndex])
 
         val gradientStartColors = mutableListOf<Int>()
         if (shapeGradientColor1 != DEF_VALUE_INT) {

@@ -11,7 +11,7 @@ import android.graphics.drawable.GradientDrawable
  * @UpdateRemark:   更新说明
  * @Version:        1.0
  */
-object ShapeConstant {
+object RShapeConstant {
 
 
     val shapeTypeList = listOf(

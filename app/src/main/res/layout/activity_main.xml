@@ -5,9 +5,9 @@
     android:layout_width="match_parent"
     android:orientation="vertical"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context="com.bugrui.shapedemo.MainActivity">
 
-    <com.bugrui.shape.ShapeLinearLayout
+    <com.bugrui.shape.RShapeLinearLayout
         app:shapeLlStrokeSize="1"
         app:shapeLlStrokeColor="@color/design_default_color_primary"
         android:layout_margin="20dp"
@@ -17,7 +17,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <com.bugrui.shape.ShapeTextView
+        <com.bugrui.shape.RShapeTextView
             android:padding="20dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -27,7 +27,7 @@
             app:shapeTvRadius="20" />
 
 
-        <com.bugrui.shape.ShapeEditText
+        <com.bugrui.shape.RShapeEditText
             app:shapeEtRadius="8"
             android:paddingHorizontal="8dp"
             android:paddingVertical="20dp"
@@ -38,10 +38,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
-    </com.bugrui.shape.ShapeLinearLayout>
+    </com.bugrui.shape.RShapeLinearLayout>
 
 
-    <com.bugrui.shape.ShapeFrameLayout
+    <com.bugrui.shape.RShapeFrameLayout
         app:shapeFlRadius="50"
         app:shapeFlGradientColor1="@color/design_default_color_primary"
         app:shapeFlGradientColor2="@color/cardview_dark_background"
@@ -51,7 +51,7 @@
 
 
 
-    </com.bugrui.shape.ShapeFrameLayout>
+    </com.bugrui.shape.RShapeFrameLayout>
 
 
 </LinearLayout>

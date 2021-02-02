@@ -15,7 +15,7 @@ import android.widget.FrameLayout
  * @UpdateRemark:   更新说明
  * @Version:        1.0
  */
-class ShapeFrameLayout @JvmOverloads constructor(
+class RShapeFrameLayout @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null,
     defStyleAttr: Int = 0
@@ -52,15 +52,15 @@ class ShapeFrameLayout @JvmOverloads constructor(
         val shapeRightBottomRadius = typedArray.getFloat(R.styleable.ShapeFrameLayout_shapeFlRightBottomRadius, DEF_VALUE_FLOAT)
         typedArray.recycle()
 
-        setShapeType(ShapeConstant.shapeTypeList[shapeTypeIndex])
+        setShapeType(RShapeConstant.shapeTypeList[shapeTypeIndex])
         if (shapeBgColor != DEF_VALUE_INT)
             setShapeBackgroundColor(shapeBgColor)
         if (shapeStrokeSize != DEF_VALUE_INT)
             setShapeStroke(shapeStrokeSize, shapeStrokeColor)
         if (shapeGradientTypeIndex != DEF_VALUE_INT)
-            setShapeGradientType(ShapeConstant.gradientTypeList[shapeGradientTypeIndex])
+            setShapeGradientType(RShapeConstant.gradientTypeList[shapeGradientTypeIndex])
         if (shapeGradientOrientationIndex != DEF_VALUE_INT)
-            setShapeGradientOrientation(ShapeConstant.gradientOrientationList[shapeGradientOrientationIndex])
+            setShapeGradientOrientation(RShapeConstant.gradientOrientationList[shapeGradientOrientationIndex])
 
         val gradientStartColors = mutableListOf<Int>()
         if (shapeGradientColor1 != DEF_VALUE_INT) {
