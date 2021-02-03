@@ -3,7 +3,7 @@
 
 
     <!-- ShapeTextView,xml快速配置Shape -->
-    <declare-styleable name="ShapeTextView">
+    <declare-styleable name="RShapeTextView">
 
         <!-- shape类型 -->
         <attr name="shapeTvType" format="integer">
@@ -83,7 +83,7 @@
     </declare-styleable>
 
     <!-- ShapeEditText,xml快速配置Shape -->
-    <declare-styleable name="ShapeEditText">
+    <declare-styleable name="RShapeEditText">
 
         <!-- shape类型 -->
         <attr name="shapeEtType" format="integer">
@@ -164,7 +164,7 @@
 
 
     <!-- ShapeLinearLayout,xml快速配置Shape -->
-    <declare-styleable name="ShapeLinearLayout">
+    <declare-styleable name="RShapeLinearLayout">
 
         <!-- shape类型 -->
         <attr name="shapeLlType" format="integer">
@@ -245,7 +245,7 @@
 
 
     <!-- ShapeFrameLayout,xml快速配置Shape -->
-    <declare-styleable name="ShapeFrameLayout">
+    <declare-styleable name="RShapeFrameLayout">
 
         <!-- shape类型 -->
         <attr name="shapeFlType" format="integer">
