@@ -1,4 +1,7 @@
-# RShape. View可在xml或者代码里面配置shape  [![version](https://jitpack.io/v/BugRui/RShape.svg)](https://jitpack.io/#BugRui/RShape/1.0.0)
+# RShape. 在xml或者代码里面配置shape  [![version](https://jitpack.io/v/BugRui/RShape.svg)](https://jitpack.io/#BugRui/RShape/1.0.0)
+
+
+
  
 ### 集成
 #### Step 1. Add the JitPack repository to your build file
@@ -20,6 +23,19 @@ dependencies {
 ```
 implementation "androidx.appcompat:appcompat:latest.integration"
 ```
+
+在xml里面使用需要换成对应的View
+```
+
+RShapeTextView
+RShapeEditText
+RShapeFrameLayout
+RShapeLinearLayout
+
+```
+
+在代码里面使用可不替换View，因为是扩展方法，直接使用即可
+
 
 xml配置
 ```
