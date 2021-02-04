@@ -75,8 +75,12 @@ fun View.setShapeCornerRadii(vararg radii: Float): View {
     return this
 }
 
-fun View.setGradientCenter() {
-    getViewGradientDrawable().setGradientCenter(90F, 90F)
+/**
+ * 设置渐变中心
+ */
+fun View.setGradientCenter(x:Float,y:Float): View {
+    getViewGradientDrawable().setGradientCenter(x, y)
+    return this
 }
 
 
