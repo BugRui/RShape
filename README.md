@@ -24,7 +24,7 @@ dependencies {
 implementation "androidx.appcompat:appcompat:latest.integration"
 ```
 
-在xml里面使用需要换成对应的View
+在xml里面使用需要换成对应的View，在代码里面使用可不替换View，因为是View的扩展方法，直接使用即可
 ```
 
 RShapeTextView
@@ -33,9 +33,6 @@ RShapeFrameLayout
 RShapeLinearLayout
 
 ```
-
-在代码里面使用可不替换View，因为是扩展方法，直接使用即可
-
 
 xml配置
 ```
