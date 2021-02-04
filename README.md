@@ -16,7 +16,13 @@ dependencies {
 	implementation 'com.github.BugRui:RShape:1.0.0'
 }
 ```
+因为RShape只在内部使用compileOnly，并且依赖于appCompat，所以需要将以下依赖项添加到自己的项目中，否则compileOnly将无法通过打包
 
+Because MultiTypeLayout only USES compileOnly internally and relies on appCompat, you need to add the following dependencies to your project otherwise compileOnly will not pass
+
+```
+ implementation "androidx.appcompat:appcompat:latest.integration"
+```
 
 
 
