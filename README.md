@@ -17,9 +17,6 @@ dependencies {
 }
 ```
 因为RShape只在内部使用compileOnly，并且依赖于appCompat，所以需要将以下依赖项添加到自己的项目中，否则compileOnly将无法通过打包
-
-Because RShape only USES compileOnly internally and relies on appCompat, you need to add the following dependencies to your project otherwise compileOnly will not pass
-
 ```
 implementation "androidx.appcompat:appcompat:latest.integration"
 ```
@@ -352,7 +349,7 @@ xml配置
 
 ```
 
-代码配置
+代码配置 
 
 ```
 
@@ -392,9 +389,10 @@ fun View.setShapeCornerRadius(radius: Float): View
 fun View.setShapeCornerRadii(vararg radii: Float): View 
 
 
-fun View.setGradientCenter() {
-    getViewGradientDrawable().setGradientCenter(90F, 90F)
-}
+/**
+ * 设置渐变中心
+ */
+fun View.setGradientCenter(x:Float,y:Float): View
 
 
 /**
