@@ -12,9 +12,9 @@ allprojects {
 ```
 #### Step 2. Add the dependency
 ```
-	dependencies {
-	        implementation 'com.github.BugRui:RShape:1.0.0'
-	}
+dependencies {
+	implementation 'com.github.BugRui:RShape:1.0.0'
+}
 ```
 
 
