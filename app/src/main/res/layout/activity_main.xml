@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:orientation="vertical"
     android:layout_height="match_parent"
+    android:background="@android:color/black"
     tools:context="com.bugrui.shapedemo.MainActivity">
 
     <com.bugrui.shape.RShapeLinearLayout
@@ -32,6 +33,7 @@
             android:paddingHorizontal="8dp"
             android:paddingVertical="20dp"
             android:hint="请输入"
+            app:shapeEtBgColor="@color/design_default_color_primary"
             app:shapeEtStrokeSize="1"
             app:shapeEtStrokeColor="@color/design_default_color_primary"
             android:layout_marginStart="8dp"

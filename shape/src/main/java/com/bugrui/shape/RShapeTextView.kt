@@ -31,19 +31,19 @@ class RShapeTextView @JvmOverloads constructor(
     init {
         val typedArray = context.obtainStyledAttributes(attrs, R.styleable.RShapeTextView)
         val shapeTypeIndex = typedArray.getInt(R.styleable.RShapeTextView_shapeTvType, DEF_VALUE_INT_0)
-        val shapeBgColor = typedArray.getColor(R.styleable.RShapeTextView_shapeTvBgColor, DEF_VALUE_INT)
+        val shapeBgColor = typedArray.getColorStateList(R.styleable.RShapeTextView_shapeTvBgColor)
         val shapeStrokeSize = typedArray.getInt(R.styleable.RShapeTextView_shapeTvStrokeSize, DEF_VALUE_INT)
-        val shapeStrokeColor = typedArray.getColor(R.styleable.RShapeTextView_shapeTvStrokeColor, DEF_VALUE_INT_0)
+        val shapeStrokeColor = typedArray.getColorStateList(R.styleable.RShapeTextView_shapeTvStrokeColor)
         val shapeGradientTypeIndex = typedArray.getInt(R.styleable.RShapeTextView_shapeTvGradientType, DEF_VALUE_INT)
         val shapeGradientOrientationIndex = typedArray.getInt(R.styleable.RShapeTextView_shapeTvGradientOrientation, DEF_VALUE_INT)
-        val shapeGradientColor1 = typedArray.getColor(R.styleable.RShapeTextView_shapeTvGradientColor1, DEF_VALUE_INT)
-        val shapeGradientColor2 = typedArray.getColor(R.styleable.RShapeTextView_shapeTvGradientColor2, DEF_VALUE_INT)
-        val shapeGradientColor3 = typedArray.getColor(R.styleable.RShapeTextView_shapeTvGradientColor3, DEF_VALUE_INT)
-        val shapeGradientColor4 = typedArray.getColor(R.styleable.RShapeTextView_shapeTvGradientColor4, DEF_VALUE_INT)
-        val shapeGradientColor5 = typedArray.getColor(R.styleable.RShapeTextView_shapeTvGradientColor5, DEF_VALUE_INT)
-        val shapeGradientColor6 = typedArray.getColor(R.styleable.RShapeTextView_shapeTvGradientColor6, DEF_VALUE_INT)
-        val shapeGradientColor7 = typedArray.getColor(R.styleable.RShapeTextView_shapeTvGradientColor7, DEF_VALUE_INT)
-        val shapeGradientColor8 = typedArray.getColor(R.styleable.RShapeTextView_shapeTvGradientColor8, DEF_VALUE_INT)
+        val shapeGradientColor1 = typedArray.getColorStateList(R.styleable.RShapeTextView_shapeTvGradientColor1)
+        val shapeGradientColor2 = typedArray.getColorStateList(R.styleable.RShapeTextView_shapeTvGradientColor2)
+        val shapeGradientColor3 = typedArray.getColorStateList(R.styleable.RShapeTextView_shapeTvGradientColor3)
+        val shapeGradientColor4 = typedArray.getColorStateList(R.styleable.RShapeTextView_shapeTvGradientColor4)
+        val shapeGradientColor5 = typedArray.getColorStateList(R.styleable.RShapeTextView_shapeTvGradientColor5)
+        val shapeGradientColor6 = typedArray.getColorStateList(R.styleable.RShapeTextView_shapeTvGradientColor6)
+        val shapeGradientColor7 = typedArray.getColorStateList(R.styleable.RShapeTextView_shapeTvGradientColor7)
+        val shapeGradientColor8 = typedArray.getColorStateList(R.styleable.RShapeTextView_shapeTvGradientColor8)
         val shapeRadius = typedArray.getFloat(R.styleable.RShapeTextView_shapeTvRadius, DEF_VALUE_FLOAT)
         val shapeLeftTopRadius = typedArray.getFloat(R.styleable.RShapeTextView_shapeTvLeftTopRadius, DEF_VALUE_FLOAT)
         val shapeRightTopRadius = typedArray.getFloat(R.styleable.RShapeTextView_shapeTvRightTopRadius, DEF_VALUE_FLOAT)
@@ -52,39 +52,39 @@ class RShapeTextView @JvmOverloads constructor(
         typedArray.recycle()
 
         setShapeType(RShapeConstant.shapeTypeList[shapeTypeIndex])
-        if (shapeBgColor != DEF_VALUE_INT)
-            setShapeBackgroundColor(shapeBgColor)
-        if (shapeStrokeSize != DEF_VALUE_INT)
-            setShapeStroke(shapeStrokeSize, shapeStrokeColor)
+        if (shapeBgColor != null)
+            setShapeBackgroundColor(shapeBgColor.defaultColor)
+        if (shapeStrokeSize != DEF_VALUE_INT&&shapeStrokeColor!=null)
+            setShapeStroke(shapeStrokeSize, shapeStrokeColor.defaultColor)
         if (shapeGradientTypeIndex != DEF_VALUE_INT)
             setShapeGradientType(RShapeConstant.gradientTypeList[shapeGradientTypeIndex])
         if (shapeGradientOrientationIndex != DEF_VALUE_INT)
             setShapeGradientOrientation(RShapeConstant.gradientOrientationList[shapeGradientOrientationIndex])
 
         val gradientStartColors = mutableListOf<Int>()
-        if (shapeGradientColor1 != DEF_VALUE_INT) {
-            gradientStartColors.add(shapeGradientColor1)
+        if (shapeGradientColor1 != null) {
+            gradientStartColors.add(shapeGradientColor1.defaultColor)
         }
-        if (shapeGradientColor2 != DEF_VALUE_INT) {
-            gradientStartColors.add(shapeGradientColor2)
+        if (shapeGradientColor2 != null) {
+            gradientStartColors.add(shapeGradientColor2.defaultColor)
         }
-        if (shapeGradientColor3 != DEF_VALUE_INT) {
-            gradientStartColors.add(shapeGradientColor3)
+        if (shapeGradientColor3 != null) {
+            gradientStartColors.add(shapeGradientColor3.defaultColor)
         }
-        if (shapeGradientColor4 != DEF_VALUE_INT) {
-            gradientStartColors.add(shapeGradientColor4)
+        if (shapeGradientColor4 != null) {
+            gradientStartColors.add(shapeGradientColor4.defaultColor)
         }
-        if (shapeGradientColor5 != DEF_VALUE_INT) {
-            gradientStartColors.add(shapeGradientColor4)
+        if (shapeGradientColor5 != null) {
+            gradientStartColors.add(shapeGradientColor5.defaultColor)
         }
-        if (shapeGradientColor6 != DEF_VALUE_INT) {
-            gradientStartColors.add(shapeGradientColor4)
+        if (shapeGradientColor6 != null) {
+            gradientStartColors.add(shapeGradientColor6.defaultColor)
         }
-        if (shapeGradientColor7 != DEF_VALUE_INT) {
-            gradientStartColors.add(shapeGradientColor4)
+        if (shapeGradientColor7 != null) {
+            gradientStartColors.add(shapeGradientColor7.defaultColor)
         }
-        if (shapeGradientColor8 != DEF_VALUE_INT) {
-            gradientStartColors.add(shapeGradientColor8)
+        if (shapeGradientColor8 != null) {
+            gradientStartColors.add(shapeGradientColor8.defaultColor)
         }
         if (!gradientStartColors.isNullOrEmpty()) {
             setShapeGradientColors(gradientStartColors.toIntArray())
